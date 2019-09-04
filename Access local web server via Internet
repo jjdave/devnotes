@@ -1,0 +1,62 @@
+Accessing Local Web Server via Internet to facilite testing.
+------------------------------------------------------------
+
+LOCALTUNNEL.ME
+- https://github.com/localtunnel/localtunnel
+
+Setup:
+- nodejs - https://nodejs.org/en/download/
+
+- Install localtunnel package using:
+    
+    npm install -g localtunnel
+    
+- In a new command prompt run: 
+
+    lt --subdomain <subdomain to use> --print-requests --port <port of your local site>
+    
+- Example, to access your local website running on port 80, run:  
+
+    lt --subdomain test123xyz --print-requests --port 80
+
+    Access the site using: https://test123xyz.localtunnel.me
+    
+- The test url will be available until you close lt process or command prompt down
+
+------------------------------------------------------------------------------------------------------------ 
+
+SERVEO.NET
+- https://serveo.net
+
+- Open admin command prompt and run:
+  
+    ssh -o ServerAliveInterval=60 -R <subdomain>.serveo.net:<localport>:localhost:<localport> serveo.net
+
+- Example, to access your local website running on port 80, run:
+
+    ssh -o ServerAliveInterval=60 -R test123xyz.serveo.net:80:localhost:80 serveo.net
+
+  Access the site using: https://test123xyz.serveo.net
+
+- The test url will be available until you close lt process or command prompt down
+
+------------------------------------------------------------------------------------------------------------ 
+
+NGROK
+- https://ngrok.com/
+
+Setup:
+  - Download ngrok from https://ngrok.com/download
+  - Place the single executable in a directory that is included in the system path so that when 
+    you run the ngrok command the OS will find it.
+  
+  - Open admin command prompt and run:
+    
+      ngrok http <port>
+
+- Example, to access your local website running on port 80, run:
+
+    ngrok http 80
+    
+- ngrok will run and you'll see under the free version, you'll get a Url allocated. Use that to access your site.
+- There are limitations with the free version in the number of connections - see https://ngrok.com/pricing
