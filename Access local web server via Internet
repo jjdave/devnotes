@@ -25,23 +25,6 @@ Setup:
 
 ------------------------------------------------------------------------------------------------------------ 
 
-SERVEO.NET
-- https://serveo.net
-
-- Open admin command prompt and run:
-  
-    ssh -o ServerAliveInterval=60 -R <subdomain>.serveo.net:<localport>:localhost:<localport> serveo.net
-
-- Example, to access your local website running on port 80, run:
-
-    ssh -o ServerAliveInterval=60 -R test123xyz.serveo.net:80:localhost:80 serveo.net
-
-  Access the site using: https://test123xyz.serveo.net
-
-- The test url will be available until you close lt process or command prompt down
-
------------------------------------------------------------------------------------------------------------- 
-
 NGROK
 - https://ngrok.com/
 
